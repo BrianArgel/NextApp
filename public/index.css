@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Slab", serif;
+}
+:root {
+  --gris: #3d3d3d;
+  --gris2: #6f6f6f;
+  --gris3: #e1e1e1;
+  --naraja: #da552f;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+h1,
+h2,
+h3 {
+  margin: 0 0 2rem 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.header {
+  padding: 0.8rem;
+}
+
+.listado-productos {
+  background-color: #f3f3f3;
+}
+.contenedor {
+  max-width: 1200px;
+  width: 95%;
+  padding: 5rem 0;
+  margin: 0 auto;
+}
+.bg-white {
+  background-color: #fff;
+}
+.line {
+  margin-top: 1rem;
+  border-bottom: 2px solid var(--gris3);
+}
+
+.contenedor-header {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+.logo {
+  color: var(--naraja);
+  font-size: 3rem;
+  font-weight: 700;
+}
+.boton {
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid #d1d1d1;
+  padding: 0.8rem 2rem;
+  margin-right: 1rem;
+}
+.boton > a {
+  color: #000;
+}
+.boton2 {
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--naraja);
+  border: none;
+  padding: 0.8rem 2rem;
+  color: white;
+  margin-right: 1rem;
+}
+.boton2 > a {
+  color: white;
+}
+.user {
+  margin-right: 2rem;
+}
+.content-user {
+  display: flex;
+  align-items: center;
+}
+.contenedor-search {
+  display: flex;
+  align-items: center;
+}
+.input {
+  border: 1px solid var(--gris3);
+  margin-left: 2rem;
+  padding: 1rem;
+  min-width: 300px;
+}
+form .heading {
+  position: relative;
+}
+.input-submit {
+  height: 3rem;
+  width: 3rem;
+  background-size: 4rem;
+  background-image: url(/images/buscar.png);
+  background-repeat: no-repeat;
+  border: none;
+  background-color: white;
+}
+nav,
+a {
+  padding-left: 2rem;
+  font-size: 1.8rem;
+  color: var(--gris2);
+}
+@media (min-width: 768px) {
+  .contenedor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
