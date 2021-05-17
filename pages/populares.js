@@ -1,25 +1,26 @@
-import React, { useState } from 'react'
-import Layout from '../components/layout/Layout'
-import Router from 'next/router'
-import firebase from '../firebase'
-import 'firebase/auth'
+import React from 'react'
+import DetallesProducto from '../components/layout/DetallesProducto'
+import Layout from "../components/layout/Layout"
+import useProducto from '../hooks/useProducto'
+const Populares = () => {
+    const { productos } = useProducto('votos')
 
-// validaciones
-import useValidacion from '../hooks/useValidacion'
-import validarCrearCuenta from '../validacion/validarCrearCuenta'
-
-const STATE_INICIAL = {
-    nombre: '',
-    email: '',
-    password: ''
-}
-
-const populares = () => {
     return (
         <Layout>
-            <h1>Populares</h1>
+            <div className="listado-productos">
+                <div className="contenedor">
+                    <ul className="bg-white">
+                        {productos.map(producto => (
+                            <DetallesProducto
+                                key={producto.id}
+                                producto={producto}
+                            />
+                        ))}
+                    </ul>
+                </div>
+            </div>
         </Layout>
     )
 }
 
-export default populares
+export default Populares

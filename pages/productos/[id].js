@@ -88,6 +88,27 @@ const Producto = () => {
 
 
 	}
+
+	//revisar si es el creador
+
+	const puedeBorrar = () => {
+		if (!usuario) return false;
+
+		if (creador.id === usuario.uid) {
+			return true
+		}
+
+	}
+
+	//eliminar producto 
+	const eliminarProducto = async () => {
+		try {
+			await firebase.db.collection('producto').doc(id).delete();
+			router.push("/")
+		} catch (error) {
+			console.log(error);
+		}
+	}
 	return (
 		<>
 			<Layout>
@@ -153,7 +174,12 @@ const Producto = () => {
 
 						<p className="voto">votos {votos}</p>
 					</aside>
+
 				</div>
+				{puedeBorrar() &&
+					<button className="inputSubmit"
+						onClick={eliminarProducto}
+					>Eliminar Producto</button>}
 			</Layout>
 
 		</>

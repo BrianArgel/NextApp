@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import Buscar from '../ui/Buscar'
 import Navegacion from './Navegacion'
 import Link from 'next/link'
-import FileUploader from 'react-firebase-file-uploader'
+
 import { FirebaseContext } from '../../firebase'
 
 const Header = () => {
